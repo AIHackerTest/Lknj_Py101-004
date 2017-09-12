@@ -1,0 +1,21 @@
+<HTML>
+    <head>
+        <title>"Hello World!"</title>
+    </head>
+    <body>
+        <h1 align="center">城市天气查询系统</h1>
+        <div align="center">
+        <img src="{{ url_for('static', filename='weather.jpg') }}" alt="天气图片" widt ="500" high="250">
+
+        <form action="/user_request" method="get">
+            城市：<input type="text" name ="city"> <br>
+            <input type="submit" name="query" value="查询">
+            <input type="submit" name="help" value="帮助">
+            <input type="submit" name="history" value="历史">
+        </form>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</HTML>
